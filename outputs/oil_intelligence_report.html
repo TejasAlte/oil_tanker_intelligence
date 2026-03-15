@@ -1,0 +1,101 @@
+<html><head><meta charset='utf-8'></head><body>
+<style>
+  body           { background:#0d1b2a; color:#e0e0e0; font-family:'Segoe UI',sans-serif; margin:0; padding:20px; }
+  .header        { background:linear-gradient(135deg,#1a237e,#0d47a1); padding:30px;
+                   border-radius:12px; margin-bottom:20px; border-left:5px solid #FFD700; }
+  .header h1     { color:#FFD700; font-size:2em; margin:0 0 8px; }
+  .header p      { color:#90CAF9; margin:0; font-size:1.05em; }
+  .kpi-grid      { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:20px; }
+  .kpi           { background:#111133; border-radius:10px; padding:18px; text-align:center;
+                   border:1px solid rgba(255,255,255,0.1); }
+  .kpi .val      { font-size:2em; font-weight:bold; color:#FFD700; }
+  .kpi .lbl      { font-size:0.82em; color:#888; margin-top:4px; }
+  .section       { background:#111133; border-radius:10px; padding:20px; margin-bottom:15px;
+                   border-left:4px solid; }
+  .section.red   { border-color:#FF4136; }
+  .section.orange{ border-color:#FF851B; }
+  .section.green { border-color:#2ECC40; }
+  .section h3    { margin:0 0 12px; font-size:1.1em; }
+  .section.red h3    { color:#FF4136; }
+  .section.orange h3 { color:#FF851B; }
+  .section.green h3  { color:#2ECC40; }
+  .tag           { display:inline-block; padding:3px 10px; border-radius:12px;
+                   font-size:0.78em; margin:2px; }
+  .tag.red       { background:rgba(255,65,36,0.2); color:#FF4136; border:1px solid #FF4136; }
+  .tag.orange    { background:rgba(255,133,27,0.2); color:#FF851B; border:1px solid #FF851B; }
+  .tag.green     { background:rgba(46,204,64,0.2); color:#2ECC40; border:1px solid #2ECC40; }
+  .tag.blue      { background:rgba(0,116,217,0.2); color:#7EC8E3; border:1px solid #7EC8E3; }
+  table          { width:100%; border-collapse:collapse; font-size:0.9em; }
+  th             { background:#1a237e; color:#FFD700; padding:8px 12px; text-align:left; }
+  td             { padding:7px 12px; border-bottom:1px solid rgba(255,255,255,0.07); }
+  tr:hover td    { background:rgba(255,255,255,0.04); }
+  .risk-bar      { height:8px; border-radius:4px; background:linear-gradient(to right,
+                   #2ECC40,#FFDC00,#FF851B,#FF4136); margin-top:4px; }
+  .footer        { text-align:center; color:#555; font-size:0.8em; margin-top:25px; }
+</style>
+
+<div class="header">
+  <h1>🛢️ Global Oil Shipping Intelligence Report</h1>
+  <p>Analysis Period: Dec 13, 2025 –
+     Mar 13, 2026  |
+     Generated: 2026-03-13 22:56 UTC</p>
+</div>
+
+<div class="kpi-grid">
+  <div class="kpi"><div class="val">250</div>
+    <div class="lbl">📡 Tankers Tracked</div></div>
+  <div class="kpi"><div class="val" style="color:#FF4136">48</div>
+    <div class="lbl">⚠️ Peak Risk Score</div></div>
+  <div class="kpi"><div class="val">$90.7</div>
+    <div class="lbl">💹 Avg Brent (USD/bbl)</div></div>
+  <div class="kpi"><div class="val" style="color:#FF851B">0</div>
+    <div class="lbl">🕳️ Dark Ship Events</div></div>
+</div>
+
+<div class="section red">
+  <h3>🔴 CRITICAL ALERT — Strait of Hormuz</h3>
+  <p>Composite risk score of <b>47.5/100</b> — highest monitored chokepoint.
+  Geopolitical tensions combined with elevated anomalous AIS activity and declining transit
+  speeds indicate potential disruption risk to ~21.0 Mbbl/d of global supply.</p>
+  <p><b>Recommended Actions:</b></p>
+  <ul>
+  <li>Cape of Good Hope (+6,400 nm, +19 days, +38% cost)</li><li>East Africa Coastal (+2,800 nm, +8 days, +15% cost)</li><li>Trans-Arabian Pipeline (+0 nm, +2 days, +22% cost)</li>
+  </ul>
+</div>
+
+<div class="section orange">
+  <h3>🟠 ANOMALY INTELLIGENCE</h3>
+  <p>Detected <b>6,763 anomalous AIS pings</b> across 0 vessels
+  during the analysis period. Key anomaly signatures:</p>
+  <span class="tag red">AIS Gap / Dark Shipping</span>
+  <span class="tag orange">Route Deviation</span>
+  <span class="tag orange">Speed Anomaly</span>
+  <span class="tag blue">Unusual Congregation</span>
+</div>
+
+<div class="section orange">
+  <h3>📊 CHOKEPOINT RISK MATRIX</h3>
+  <table>
+    <tr><th>Chokepoint</th><th>Risk Score</th><th>Flow (Mbbl/d)</th>
+        <th>Trend</th><th>Best Alternative</th></tr>
+    <tr><td>🟠 Strait of Hormuz</td><td><b style="color:#FF851B">47.5</b></td><td>21.0</td><td>📈 Stable</td><td>Cape of Good Hope</td></tr>
+<tr><td>🟡 Bab el-Mandeb</td><td><b style="color:#FFDC00">37.8</b></td><td>8.8</td><td>📈 Stable</td><td>Cape of Good Hope bypass</td></tr>
+<tr><td>🟡 Suez Canal</td><td><b style="color:#FFDC00">38.2</b></td><td>5.5</td><td>📈 Stable</td><td>Cape of Good Hope</td></tr>
+<tr><td>🟡 Strait of Malacca</td><td><b style="color:#FFDC00">30.5</b></td><td>16.0</td><td>📈 Stable</td><td>Lombok Strait</td></tr>
+<tr><td>🟢 Panama Canal</td><td><b style="color:#2ECC40">23.5</b></td><td>1.2</td><td>📈 Stable</td><td>Cape Horn</td></tr>
+  </table>
+</div>
+
+<div class="section green">
+  <h3>💹 MARKET CORRELATION</h3>
+  <p>Traffic–Price correlation: <b>r = +0.239</b> |
+     Anomaly–Price correlation: <b>r = +0.773</b><br>
+     Brent crude traded in range <b>$82.0 – $105.5</b>
+     over the study period ($23.5 range).</p>
+</div>
+
+<div class="footer">
+  🔒 Classification: Internal Intelligence | Source: Simulated AIS + Synthetic Brent Data |
+  Model: Isolation Forest + DBSCAN + Granger Causality
+</div>
+</body></html>
